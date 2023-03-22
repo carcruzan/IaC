@@ -25,7 +25,7 @@ pipeline {
                         echo Packaging...
                         sam package --s3-bucket=iac-training-ecs -t template.yaml --output-template-file=final_template.yaml
                         echo Deplopying...
-                        sam deploy -t final_template.yaml --stack-name=test-IaC --region=us-east-1 --capabilities CAPABILITY_IAM --parameter-overrides "ParameterKey=FunctionName,ParameterValue=$FunctionName"
+                        sam deploy -t final_template.yaml --stack-name=test-IaC --region=us-east-1 --no-fail-on-empty-changeset --capabilities CAPABILITY_IAM --parameter-overrides "ParameterKey=FunctionName,ParameterValue=$FunctionName"
                     '''
                 }
             }
