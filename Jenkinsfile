@@ -11,8 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git(url: 'https://github.com/carcruzan/IaC.git', branch: 'main')
-            }
-            
+            }            
         }
         stage('SAM Deploy'){
             steps {
