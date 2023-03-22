@@ -1,0 +1,54 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: An example CloudFormation template
+Parameters:
+  FunctionName:
+    Type: String
+Resources:
+  LambdaFunction:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: !Ref FunctionName
+      Runtime: python3.8
+      Role: !GetAtt LambdaFunctionRole.Arn
+      MemorySize: 1024
+      Handler: lambda_handler.handler
+      Code: test-function/
+  LambdaFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Path: "/"
+      Policies:
+      - PolicyName: AppendToLogsPolicy
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+            Resource: "*"
+  # Service:
+  #   Type: AWS::ECS::Service
+  #   Properties:
+  #     CapacityProviderStrategy:
+  #     - Base: 0
+  #       CapacityProvider: Infra-ECS-Cluster-dev-clusterWeblogic-b4e8cf0a-EC2CapacityProvider-mg9vDXdx763R
+  #       Weight: 1
+  #     ServiceName: !Ref ServiceName
+  #     Cluster: !Ref Cluster
+  #     TaskDefinition: !Ref TaskDefinition
+  #     DeploymentConfiguration:
+  #       MinimumHealthyPercent: 100
+  #       MaximumPercent: 200
+  #     DesiredCount: 1
+  #     HealthCheckGracePeriodSeconds: 30
