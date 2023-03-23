@@ -4,7 +4,7 @@ pipeline {
     }
 
 	parameters {
-    	string(defaultValue: "dev-test-lambda", description: 'Name Lambda Function', name: 'FunctionName')
+    	string(defaultValue: "dev-lambda", description: 'Name Lambda Function', name: 'FunctionName')
 	}
 
 	stages {
