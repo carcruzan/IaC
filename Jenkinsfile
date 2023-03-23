@@ -15,18 +15,15 @@ pipeline {
         }
         stage('SAM Deploy'){
             steps {
-                withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
-                    sh '''
-                        ls -la
-                        aws sts assume-role --role-arn arn:aws:iam::184161772257:role/DevOps-test --role-session-name s3-access-example
-                        echo Building...
-                        sam build
-                        echo Packaging...
-                        sam package --s3-bucket=iac-training-ecs -t template.yaml --output-template-file=final_template.yaml
-                        echo Deplopying...
-                        sam deploy -t final_template.yaml --stack-name=test-IaC --region=us-east-1 --no-fail-on-empty-changeset --capabilities CAPABILITY_IAM --parameter-overrides "ParameterKey=FunctionName,ParameterValue=$FunctionName"
-                    '''
-                }
+                sh '''
+                    ls -la
+                    echo Building...
+                    sam build
+                    echo Packaging...
+                    sam package --s3-bucket=iac-training-ecs -t template.yaml --output-template-file=final_template.yaml
+                    echo Deplopying...
+                    sam deploy -t final_template.yaml --stack-name=test-IaC --region=us-east-1 --no-fail-on-empty-changeset --capabilities CAPABILITY_IAM --parameter-overrides "ParameterKey=FunctionName,ParameterValue=$FunctionName"
+                '''
             }
         }
 	}
