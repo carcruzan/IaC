@@ -10,7 +10,7 @@ Resources:
       FunctionName: !Ref FunctionName
       Runtime: python3.8
       Role: !GetAtt LambdaFunctionRole.Arn
-      MemorySize: 1024
+      MemorySize: 2048
       Handler: lambda_function.handler
       Code: test-function/
   LambdaFunctionRole:
