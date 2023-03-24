@@ -4,8 +4,12 @@
         "ParameterValue": "dev-stack-lambda"
     },
     {
+        "ParameterKey": "region",
+        "ParameterValue": "us-east-1"
+    },    
+    {
       "ParameterKey": "FunctionName",
-      "ParameterValue": "dev-test-lambda"
+      "ParameterValue": "dev-lambda"
     },
     {
       "ParameterKey": "Runtime",
