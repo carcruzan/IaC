@@ -26,10 +26,9 @@
     {
         "ParameterKey": "CodePath",
         "ParameterValue": "function.zip"
-    }
+    },
     {
         "ParameterKey": "Bucket",
         "ParameterValue": "iac-training-ecs"
     }
-    
 ]
