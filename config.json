@@ -24,7 +24,7 @@
         "ParameterValue": "lambda_function.handler"
     },
     {
-        "ParameterKey": "CodePath",
+        "ParameterKey": "ZipName",
         "ParameterValue": "function.zip"
     },
     {
