@@ -1,34 +1,41 @@
-[
-    {
-        "ParameterKey": "stackName",
-        "ParameterValue": "dev-stack-lambda"
-    },
-    {
-        "ParameterKey": "region",
-        "ParameterValue": "us-east-1"
-    },    
-    {
-      "ParameterKey": "FunctionName",
-      "ParameterValue": "dev-lambda"
-    },
-    {
-      "ParameterKey": "Runtime",
-      "ParameterValue": "python3.7"
-    },
-    {
-        "ParameterKey": "MemorySize",
-        "ParameterValue": "1024"
-    },
-    {
-        "ParameterKey": "Handler",
-        "ParameterValue": "lambda_function.handler"
-    },
-    {
-        "ParameterKey": "ZipName",
-        "ParameterValue": "function.zip"
-    },
-    {
-        "ParameterKey": "Bucket",
-        "ParameterValue": "iac-training-ecs"
-    }
-]
+{
+    "properties":[
+        {
+            "PathCodeLambda": "test-function"
+        }
+    ],
+    "deploy": [
+        {
+            "ParameterKey": "stackName",
+            "ParameterValue": "dev-stack-lambda"
+        },
+        {
+            "ParameterKey": "region",
+            "ParameterValue": "us-east-1"
+        },    
+        {
+          "ParameterKey": "FunctionName",
+          "ParameterValue": "dev-lambda"
+        },
+        {
+          "ParameterKey": "Runtime",
+          "ParameterValue": "python3.7"
+        },
+        {
+            "ParameterKey": "MemorySize",
+            "ParameterValue": "1024"
+        },
+        {
+            "ParameterKey": "Handler",
+            "ParameterValue": "lambda_function.handler"
+        },
+        {
+            "ParameterKey": "ZipName",
+            "ParameterValue": "function.zip"
+        },
+        {
+            "ParameterKey": "Bucket",
+            "ParameterValue": "iac-training-ecs"
+        }
+    ]
+}
