@@ -1,4 +1,3 @@
 @Library('cloud-devops@main') _
 
-
-deploySamTemplate()
+deploySamTemplate(PathCodeLambda: 'test-function')
