@@ -25,6 +25,11 @@
     },
     {
         "ParameterKey": "CodePath",
-        "ParameterValue": "test-function/"
+        "ParameterValue": "function.zip"
     }
+    {
+        "ParameterKey": "Bucket",
+        "ParameterValue": "iac-training-ecs"
+    }
+    
 ]
