@@ -13,7 +13,7 @@
     },
     {
       "ParameterKey": "Runtime",
-      "ParameterValue": "python3.8"
+      "ParameterValue": "python3.9"
     },
     {
         "ParameterKey": "MemorySize",
