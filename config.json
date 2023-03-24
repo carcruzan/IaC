@@ -1,0 +1,26 @@
+[
+    {
+        "ParameterKey": "stack-name",
+        "ParameterValue": "dev-stack-lambda"
+    },
+    {
+      "ParameterKey": "FunctionName",
+      "ParameterValue": "dev-test-lambda"
+    },
+    {
+      "ParameterKey": "Runtime",
+      "ParameterValue": "python3.8"
+    },
+    {
+        "ParameterKey": "MemorySize",
+        "ParameterValue": "1024"
+    },
+    {
+        "ParameterKey": "Handler",
+        "ParameterValue": "lambda_function.handler"
+    },
+    {
+        "ParameterKey": "CodePath",
+        "ParameterValue": "test-function"
+    }
+]
