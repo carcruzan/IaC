@@ -1,11 +1,11 @@
 [
     {
         "ParameterKey": "stackName",
-        "ParameterValue": "dev-stack-lambda"
+        "ParameterValue": 'dev-stack-lambda'
     },
     {
         "ParameterKey": "region",
-        "ParameterValue": "us-east-1"
+        "ParameterValue": 'us-east-1'
     },    
     {
       "ParameterKey": "FunctionName",
