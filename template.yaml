@@ -37,18 +37,3 @@ Resources:
             - logs:CreateLogStream
             - logs:PutLogEvents
             Resource: "*"
-  # Service:
-  #   Type: AWS::ECS::Service
-  #   Properties:
-  #     CapacityProviderStrategy:
-  #     - Base: 0
-  #       CapacityProvider: Infra-ECS-Cluster-dev-clusterWeblogic-b4e8cf0a-EC2CapacityProvider-mg9vDXdx763R
-  #       Weight: 1
-  #     ServiceName: !Ref ServiceName
-  #     Cluster: !Ref Cluster
-  #     TaskDefinition: !Ref TaskDefinition
-  #     DeploymentConfiguration:
-  #       MinimumHealthyPercent: 100
-  #       MaximumPercent: 200
-  #     DesiredCount: 1
-  #     HealthCheckGracePeriodSeconds: 30
