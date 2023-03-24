@@ -1,6 +1,6 @@
 [
     {
-        "ParameterKey": "stack-name",
+        "ParameterKey": "stackName",
         "ParameterValue": "dev-stack-lambda"
     },
     {
