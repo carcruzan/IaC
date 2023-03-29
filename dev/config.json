@@ -6,18 +6,6 @@
     ],
     "deploy": [
         {
-            "ParameterKey": "ServiceName",
-            "ParameterValue": "dev-serviceWeblogic"
-        },        
-        {
-            "ParameterKey": "ClusterName",
-            "ParameterValue": "dev-clusterWeblogic"
-        },
-        {
-            "ParameterKey": "TaskDefinition",
-            "ParameterValue": "dev-taskDefinitionWeblogic"
-        },                
-        {
             "ParameterKey": "stackName",
             "ParameterValue": "dev-stack-lambda"
         },
@@ -31,11 +19,11 @@
         },
         {
           "ParameterKey": "Runtime",
-          "ParameterValue": "python3.8"
+          "ParameterValue": "python3.7"
         },
         {
             "ParameterKey": "MemorySize",
-            "ParameterValue": "2048"
+            "ParameterValue": "1024"
         },
         {
             "ParameterKey": "Handler",
