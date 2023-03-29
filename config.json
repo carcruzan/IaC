@@ -7,27 +7,23 @@
     "deploy": [
         {
             "ParameterKey": "ServiceName",
-            "ParameterValue": "dev-serviceWeblogic"
-        },        
+            "ParameterValue": "${ENVIRONMENT_ID}-serviceWeblogic"
+        },
         {
             "ParameterKey": "ClusterName",
-            "ParameterValue": "dev-clusterWeblogic"
+            "ParameterValue": "${ENVIRONMENT_ID}-clusterWeblogic"
         },
         {
             "ParameterKey": "TaskDefinition",
-            "ParameterValue": "dev-taskDefinitionWeblogic"
-        },                
-        {
-            "ParameterKey": "stackName",
-            "ParameterValue": "dev-stack-lambda"
+            "ParameterValue": "${ENVIRONMENT_ID}-taskDefinitionWeblogic"
         },
         {
-            "ParameterKey": "region",
-            "ParameterValue": "us-east-1"
-        },    
+            "ParameterKey": "stackName",
+            "ParameterValue": "stack-lambda"
+        },
         {
           "ParameterKey": "FunctionName",
-          "ParameterValue": "dev-lambda"
+          "ParameterValue": "${ENVIRONMENT_ID}-lambda"
         },
         {
           "ParameterKey": "Runtime",
