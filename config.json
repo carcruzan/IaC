@@ -31,7 +31,7 @@
         },
         {
             "ParameterKey": "MemorySize",
-            "ParameterValue": "2048"
+            "ParameterValue": "1024"
         },
         {
             "ParameterKey": "Handler",
