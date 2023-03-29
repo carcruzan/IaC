@@ -19,7 +19,7 @@
         },
         {
             "ParameterKey": "stackName",
-            "ParameterValue": "stack-lambda"
+            "ParameterValue": "ENVIRONMENT_ID-stack-lambda"
         },
         {
           "ParameterKey": "FunctionName",
