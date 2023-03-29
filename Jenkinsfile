@@ -1,3 +1,3 @@
 @Library('cloud-devops@main') _
 
-deploySamTemplate()
+deploySamTemplate(scmUrl: 'https://github.com/carcruzan/IaC.git')
