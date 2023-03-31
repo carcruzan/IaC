@@ -1,3 +1,18 @@
-@Library('cloud-devops@main') _
+pipeline {
+    agent any
 
-deploySamTemplate(scmUrl: 'https://github.com/carcruzan/IaC.git')
+    stages {
+        stage('Deploy') {
+            steps {
+                script {
+                    sh '''
+                        terraform init
+                        terraform plan
+                        //terraform apply
+                    
+                    '''
+                }
+            }
+        }
+    }
+}
