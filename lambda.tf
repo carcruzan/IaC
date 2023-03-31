@@ -26,6 +26,6 @@ resource "aws_lambda_function" "demo_lambda" {
   source_code_hash = data.archive_file.demo_lambda_zip.output_base64sha256
   role             = aws_iam_role.demo_lambda.arn
   function_name    = "demo_lambda"
-  handler          = "handler.lambda_handler"
+  handler          = "lambda_function.handler"
   runtime          = "python3.8"
 }
